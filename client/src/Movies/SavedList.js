@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+// import MovieCard from "./MovieCard";
 
 const SavedList = props => (
   <div className="saved-list">
@@ -6,7 +8,9 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <div className="home-button">Home</div>
+    <div className="home-button">
+      <Link className="home-button" to="/">Home</Link>
+    </div>
   </div>
 );
 
